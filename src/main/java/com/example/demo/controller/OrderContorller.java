@@ -15,10 +15,17 @@ public class OrderContorller {
     private OrderService orderService;
 
     @RequestMapping("/save")
-    public void save(@RequestBody Order order){
+    public void save(){
+        Order order=new Order();
         order.setNum(22L);
         orderService.save(order);
     }
 
+    @RequestMapping("/del")
+    public void delete(){
+        Order order=new Order();
+        order.setId(2L);
+        orderService.del(order);
+    }
 
 }
