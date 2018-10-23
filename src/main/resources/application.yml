@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/order_test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&userSSL=false
+    username: root
+    password: root
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+server:
+  port: 9014
+#spring:
+#  application:
+#    name: springCloud-order
+#eureka:
+#  instance:
+#    hostname: localhost
+#  client:
+#    register-with-eureka: true #作为服务注册
+#    fetch-registry: false #不需要同步数据
+#    service-url:
+#      defaultZone: http://localhost:9001/eureka/
